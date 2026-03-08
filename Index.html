@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta importante</title>
+    <style>
+        body {
+            background-color: #ffebee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .painel {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 { color: #d32f2f; }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        #sim { background-color: #4caf50; color: white; }
+        #nao { background-color: #f44336; color: white; position: relative; }
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Quer namorar comigo?</h1>
+        <button id="sim">SIM</button>
+        <button id="nao">NÃO</button>
+    </div>
+
+    <script>
+        const botaoNao = document.getElementById('nao');
+        const botaoSim = document.getElementById('sim');
+
+        // Função para fugir
+        botaoNao.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
+            const y = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
+            
+            botaoNao.style.position = 'absolute';
+            botaoNao.style.left = x + 'px';
+            botaoNao.style.top = y + 'px';
+        });
+
+        // O que acontece no SIM
+        botaoSim.addEventListener('click', () => {
+            alert('TE AMO MINHA PRINCESA! ❤️');
+        });
+    </script>
+</body>
+</html>
