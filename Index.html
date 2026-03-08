@@ -45,22 +45,22 @@
     </div>
 
     <script>
-        const botaoNao = document.getElementById('nao');
-        const botaoSim = document.getElementById('sim');
+        document.addEventListener("DOMContentLoaded", function() {
+            const botaoNao = document.getElementById('nao');
+            const botaoSim = document.getElementById('sim');
 
-        // Função para fugir
-        botaoNao.addEventListener('mouseover', () => {
-            const x = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
-            const y = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
-            
-            botaoNao.style.position = 'absolute';
-            botaoNao.style.left = x + 'px';
-            botaoNao.style.top = y + 'px';
-        });
+            botaoNao.addEventListener('mouseover', () => {
+                const x = Math.random() * (window.innerWidth - botaoNao.offsetWidth);
+                const y = Math.random() * (window.innerHeight - botaoNao.offsetHeight);
+                
+                botaoNao.style.position = 'absolute';
+                botaoNao.style.left = x + 'px';
+                botaoNao.style.top = y + 'px';
+            });
 
-        // O que acontece no SIM
-        botaoSim.addEventListener('click', () => {
-            alert('TE AMO MINHA PRINCESA! ❤️');
+            botaoSim.addEventListener('click', () => {
+                alert('TE AMO MINHA PRINCESAAAAAA! ❤️');
+            });
         });
     </script>
 </body>
